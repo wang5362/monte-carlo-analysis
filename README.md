@@ -136,5 +136,5 @@ hist(Actual_NB, breaks=50 ,xlim=c(-20,35),ylim=c(0,100), main="Monte Carlo: Hist
      ylab="# of Trials out of 1000",xlab="Net Benefits in increments($ million)")
 ```
 
-![histogramn](link-to-image)
+![histogramn](histogram.png)
 
