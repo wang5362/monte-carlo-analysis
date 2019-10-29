@@ -6,7 +6,7 @@ options(digits=5)
 library(readxl)
 setwd("~/Desktop/ECON/ECON 4831BCA")
 data=read_xls('EasyValues.xls')
-print(data)
+head(data)
 # declare variables with values and max and min 
 
 #STEP 2: generate random values for each parameter
@@ -41,13 +41,13 @@ NB_neither= -(Ca+Cs)
 NB_p1= -(Ca+Cs)+(Cenv-Cev)
 NB_p2= -(Ca+Cs)+((Cenv-Cev)/1+0.05)
 
-table11<-cbind(r,vl,vh,a,ml,mh,theta,e,t,i, NB_neither,NB_p1,NB_p2)
+table_bind<-cbind(r,vl,vh,a,ml,mh,theta,e,t,i, NB_neither,NB_p1,NB_p2)
 #STEP 5 & 6: generate occurence of epidemy and find NB
-p1<- runif(1000,min=0, max=1) #generate random p1
-p2<- runif(1000,min=0, max=1)
+p1<- runif(10000,min=0, max=1) #generate random p1
+p2<- runif(10000,min=0, max=1)
 Actual_NB<-vector()
 outcome<-vector()
-for (j in 1:1000){
+for (j in 1:10000){
 if (p1[j]<0.4) {
   Actual_NB <- c(Actual_NB, NB_p1[j])
   outcome<-c(outcome,'p1')
@@ -66,4 +66,6 @@ summary(table)
 #STEP 7: generate appropriate bin
 
 hist(Actual_NB, breaks=50 ,xlim=c(-20,35),ylim=c(0,100), main="Monte Carlo: Histogram", 
-     ylab="# of Trials out of 1000",xlab="Net Benefits in increments($ million)")
+     ylab="Number of Trials out of 10,000",xlab="Net Benefits in increments($ million)", col = 'black')
+
+
