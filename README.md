@@ -17,7 +17,28 @@ distribution
 
 ### Desribtion of Parameters
 
-![Parameters](net_benefits.png)
+######  County Population (N): Total Population in the county
+######  Fraction High Risk (r): One half population over age 64
+######  Low-Risk Vaccination (Vl): Fraction of low-risk persons vaccinated 
+######  High-Risk Vaccination (Vh): Fraction of high-risk person vaccinated 
+######  Adverse Reaction (alpha) : Fraction vaccinated who become high risk
+######  Low-Risk Mortality (ml): Mortality rate for low-risk infected 
+######  High-Risk Mortality (mh): Mortality rate for high-risk infected 
+######  Herd Immunity Effect (theta): Fraction of eddectively vaccinated who contriure to herd immunity effect 
+######  Vaccine Effectiveness (e): Fraction of vaccinated who develop immunity 
+######  Hours Lost(t): Average Number of Work hours lost to illness
+######  Infection Rate (i) :Infection rate without vaccine 
+######  First-year Epidemic (P1): Change of epidemic in current year 
+######  Second-year Epidemic (P2): Chance of epidemic next year 
+######  Vaccine Dose Price (p): Price per dose of vaccine 
+######  Overhead Cost (o): Costs not dependent on number vaccinated 
+######  Opportunity Cost of Time (w): Average wage rate in the county
+######  Value of Life(L): Assumed Value of Life
+######  Discount Rate(d): Real Discount Rate
+######  Number High-Risk Vaccinations (Vh): High Risk person vaccinated 
+######  Number Low-Risk Vaccinations(Vl): Low Risk persons vaccinated 
+######  Fraction Vaccinated (v): Fraction of total population vaccinated 
+
 
 Load course-prepared values based on the 10 variables described above using *readxl* package 
 ```
@@ -55,9 +76,6 @@ The mutually exclusive realizations of net benefits are:
 * epidemic in neither year: NB = -(Ca + Cs )
 * epidemic in current year: NB = -(Ca + Cs ) + (Cejnv - Cejv )
 * epidemic in next year: NB = -(Ca + Cs ) + (Cejnv - Cejv )/(1 + d)
-
-Parameters are based on: 
-![Net Benefits](net_benefits.png)
 
 ``` 
 x<-data$Value
@@ -119,5 +137,7 @@ hist(Actual_NB, breaks=50 ,xlim=c(-20,35),ylim=c(0,100), main="Monte Carlo: Hist
      ylab="# of Trials out of 1000",xlab="Net Benefits in increments($ million)")
 ```
 
-![histogramn](histogram.png)
+
+# ![histogramn](histogram.png)
+
 
