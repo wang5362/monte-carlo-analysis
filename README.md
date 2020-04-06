@@ -1,8 +1,8 @@
 # Monte Carlo Analysis
 
 ### Background Information 
-Hi, Welcome to my Github page - Monte Carlo Analysis
-This is a Monte Carlo Analysis from Benefit Cost Analysis Course Assignment.
+Hi, Welcome to my Github page - Monte Carlo Analysis.
+This is a Monte Carlo Analysis from my Benefit Cost Analysis Course Assignment of my Economics course 4831.
 
 ### Language Used 
 - R-studio
