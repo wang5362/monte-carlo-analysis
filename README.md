@@ -1,11 +1,16 @@
-
-
-
---- 
-
 # Monte Carlo Analysis
-Monte Carlo Analysis from Benefit Cost Analysis Course Assignment
 
+### Background Information 
+Hi, Welcome to my Github page - Monte Carlo Analysis
+This is a Monte Carlo Analysis from Benefit Cost Analysis Course Assignment.
+
+### Language Used 
+- R-studio
+
+### Computing Machine Used 
+- local computer (MacBook Pro 2015)
+
+---
 
 ## General Idea: 
 * generate artificial data
